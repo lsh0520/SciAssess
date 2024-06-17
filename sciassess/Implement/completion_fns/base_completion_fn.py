@@ -14,7 +14,6 @@ class SimpleCompletionResult(CompletionResult):
         return [self.response.strip()] if self.response else ["Unknown"]
 
 class BaseCompletionFn(CompletionFn):
-
     def __init__(
             self,
             instructions: Optional[str] = "You are a helpful assistant.",
@@ -39,6 +38,7 @@ class BaseCompletionFn(CompletionFn):
             attached_file_content = ""
         messages[-1]['content'] += attached_file_content
         return self.get_completions(messages=messages, **kwargs)
+
 
     def get_completions(self, messages: List[Dict], **kwargs: Any) -> str:
         raise NotImplementedError
