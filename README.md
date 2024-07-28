@@ -95,7 +95,6 @@ SciAssess is a comprehensive benchmark designed to evaluate the proficiency of L
 To use SciAssess, first clone the repository:
 
 ```bash
-git clone https://github.com/sci-assess/SciAssess.git
 cd SciAssess
 ```
 
